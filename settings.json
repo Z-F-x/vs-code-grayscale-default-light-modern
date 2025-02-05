@@ -22,7 +22,8 @@
     "activityBar.background": "#FFFFFF",  // Activity Bar
     "sideBar.background": "#FFFFFF",     // Sidebar
     "titleBar.activeBackground": "#FFFFFF", // Title Bar
-    "editorCursor.foreground": "#FEFEFE",   // Cursor
+    "editorCursor.foreground": "#3737373c",   // Cursor
+    "terminalCursor.foreground": "#DEDEDE",
     "tab.activeBackground": "#FFFFFF",     // Active Tab
     "statusBar.background": "#FFFFFF",    // Status Bar
     "terminal.foreground": "#D4D4D4",     // Terminal Text
@@ -57,7 +58,7 @@
     "focusBorder": "#505050",
     "widget.shadow": "#FFFFFF",
     "input.background": "#FFFFFF",
-    "input.foreground": "#D4D4D4",
+    "input.foreground": "#727272",    
     "input.border": "#FFFFFF",
     "notification.background": "#282828",
     "notification.foreground": "#D4D4D4",
@@ -72,6 +73,7 @@
     "statusBarItem.remoteForeground": "#ccc",
     "textLink.foreground": "#737373", // Color of the links (such as "Open in Editor")
     "textLink.activeForeground": "#D4D4D4",  // Color of the link when clicked or active
+    
 },
 
 
