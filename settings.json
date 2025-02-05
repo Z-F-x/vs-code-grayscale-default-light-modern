@@ -18,12 +18,13 @@
     "minimap.selectionHighlight": "#37373713",
     "editor.selectionBackground": "#37373713", // Adjust to match the inactive selection color
     "editor.bracketPairColorization.enabled": true,
-    "editor.inactiveSelectionBackground": "#FFFFFF", // Inherit or match the same color
+    "editor.inactiveSelectionBackground": "#ffffffed", // Inherit or match the same color
     "activityBar.background": "#FFFFFF",  // Activity Bar
     "sideBar.background": "#FFFFFF",     // Sidebar
     "titleBar.activeBackground": "#FFFFFF", // Title Bar
     "editorCursor.foreground": "#3737373c",   // Cursor
     "terminalCursor.foreground": "#DEDEDE",
+    "editorGroupHeader.tabsBackground": "#FFFFFF", // The background olorof entire row that tabs reside in 
     "tab.activeBackground": "#FFFFFF",     // Active Tab
     "statusBar.background": "#FFFFFF",    // Status Bar
     "terminal.foreground": "#D4D4D4",     // Terminal Text
@@ -73,17 +74,59 @@
     "statusBarItem.remoteForeground": "#ccc",
     "textLink.foreground": "#737373", // Color of the links (such as "Open in Editor")
     "textLink.activeForeground": "#D4D4D4",  // Color of the link when clicked or active
+    "editorLineNumber.activeForeground": "#555555",
+    "editorSuggestWidget.background": "#FFFFFF", // Autocomplete hover (if applicable)
+    "editor.selectionHighlightBackground": "#7777770a", // Change to any color
+    "editor.selectionHighlightBorder": "#DEDEDE", // Optional: Adds a border around it
+    "editor.findMatchBackground": "#DEDEDE",        // Color for the currently selected search match
+    "editor.findMatchHighlightBackground": "#dededeed", // Color for other matches
+    "editor.findRangeHighlightBackground": "#dededeed",  // Color for the search range highlight
+    "editor.lineHighlightBackground": "#00000000",
+    "editor.rangeHighlightBackground": "#cbcbcb48", // Highlight the line of the first matched search result
+    "editor.lineHighlightBorder": "#ffffff00",  // Transparent border around the current line
+    "editor.guides.bracketPairs": "active",
+    "peekViewEditor.background": "#eeeeee", // Used in "Go to Definition" popups
+    "peekViewEditor.matchHighlightBackground": "#555555", // Highlighted text
+    "scrollbarSlider.background": "#eeeeeefc",  // Scrollbar slider color
+    "scrollbarSlider.hoverBackground": "#dededefd",  // Scrollbar slider hover color
+    "scrollbarSlider.activeBackground": "#dededebd", // Scrollbar slider color while being pressed
+
     
 },
 
+"editor.semanticTokenColorCustomizations": {
+    "[Rouge]": {
+        "enabled": true,
+        "rules": {
+            "*.declaration": { "bold": true }
+        }
+    }
+},
 
-    "editor.semanticTokenColorCustomizations": {},
     "editor.language.colorizedBracketPairs": [
 
     ],
-    "editor.tokenColorCustomizations": {
+  
 
-    },
+    
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": [
+              "punctuation.definition.block",        // Curly braces {}
+              "punctuation.definition.parameters",    // Parentheses ()
+              "punctuation.definition.array"          // Square brackets []
+            ],
+            "settings": {
+              "background": "#FFEB3B",  // Light yellow background for matching brackets
+              "border": "1px solid #FF6347" // Tomato red border for matching brackets
+            }
+          }
+        ]
+      },
+      
+    
+    
     "editor.tabSize": 1,
     "editor.renderWhitespace": "none",
     "editor.wordWrap": "on",
@@ -92,6 +135,7 @@
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
+
     "LineNumberDeco.foregroundColorOfRepeatingDigits": "#1b1b1b",
     "LineNumberDeco.centerColorOfRainbow": "#1b1b1b",
     "LineNumberDeco.activeForeground": "#dedede",
@@ -100,6 +144,205 @@
     "editor.lineNumbers": "relative",
     "workbench.settings.applyToAllProfiles": [],
     "workbench.colorTheme": "Default Light Modern",
+    "editor.bracketPairColorization.enabled": true,  // Enable colorization of bracket pairs
+"editor.bracketPairColorization.activeScopeColor": "#ADD8E6",  // Light blue for active matched bracket
+
+
+
+    
+  "highlight.regexes": {
+    "((?:\\{))": {  // Regex matching only the opening curly brace `{`
+      "decorations": [
+        {
+          "backgroundColor": "#ffffff",     // Light Blue background for matched `{`
+          "color": "#1f1f1f",                // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+          "color": "#1f1f1f"                // Dark text color for readability
+        }
+      ]
+    },
+    "((?:\\}))": {  // Regex matching only the opening curly brace `{`
+    "decorations": [
+      {
+        "backgroundColor": "#ffffff",     // Light Blue background for matched `{`
+        "color": "#1f1f1f",                // Dark text color for readability
+      },
+      {
+        "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+        "color": "#1f1f1f"                // Dark text color for readability
+      }
+    ],
+    "((?:\\())": {  // Regex matching only the opening paranthesis `(`
+    "decorations": [
+      {
+        "backgroundColor": "#ffffff",     // Light Blue background for matched `)`
+        "color": "#1f1f1f",                // Dark text color for readability
+      },
+      {
+        "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+        "color": "#1f1f1f"                // Dark text color for readability
+      }
+      ]
+    },
+    "((?:\\)))": {  // Regex matching only the closing paranthesis `)`
+      "decorations": [
+      {
+      "backgroundColor": "#ffffff",     // Light Blue background for matched `)`
+      "color": "#1f1f1f",                // Dark text color for readability
+    },
+    {
+      "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+      "color": "#1f1f1f"                // Dark text color for readability
+    }
+  ]
+},
+},    
+"((?:\\[))": {  // Regex matching only the opening curly brace `[`
+  "decorations": [
+    {
+      "backgroundColor": "#ffffff",     // Light Blue background for matched `[`
+      "color": "#1f1f1f",                // Dark text color for readability
+    },
+    {
+      "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+      "color": "#1f1f1f"                // Dark text color for readability
+    }
+  ]
+},
+"((?:\\]))": {  // Regex matching only the opening curly brace `]`
+  "decorations": [
+  {
+    "backgroundColor": "#ffffff",     // Light Blue background for matched `]`
+    "color": "#1f1f1f",                // Dark text color for readability
+  },
+  {
+    "backgroundColor": "#ffffff",     // Light Blue background for the second match group
+    "color": "#1f1f1f"                // Dark text color for readability
+  }
+  ]
+},
+    
+    
+      
+      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        "decorations": [
+          {
+           //TODO:
+           // Alternative bright blue colors common in Microsoft and Windows color palette : #ADD8E6, #87CEFA
+            "overviewRulerColor": "#a5a5a5",
+            "backgroundColor": "#a5a5a5",
+            "color": "#ffffff",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#a5a5a5",
+            "color": "#1f1f1f"
+          }
+        ]
+      },
+      
+      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        "decorations": [
+          {
+            "overviewRulerColor": "#ff0000",
+            "backgroundColor": "#ff0000",
+            "color": "#FFFFFF",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#ff0000",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        "decorations": [
+          //OPTIMIZE : #ADD8E6, #87CEFA #00ccff
+          {
+            "overviewRulerColor": "#87CEFA",
+            "backgroundColor": "#87CEFA",
+            "color": "#FFFFFF",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#87CEFA",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+        "decorations": [
+          //IDEA: #bb00ff93, #cc00cc, #bb00ff54
+          {
+            "overviewRulerColor": "#bb00ff54",
+            "backgroundColor": "#bb00ff54",
+            "color": "#FFFFFF",
+            "fontWeight": "bold"
+          },
+          {
+            "backgroundColor": "#bb00ff54",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "(//\\s*)(\\sTODO\\s)(\\s*?:?)(.*)": [
+   {},
+   {
+    "overviewRulerColor": "#6c6c6c", // does this work?
+    // "backgroundColor": "#aaa",
+    "color": "#fff",
+    "fontWeight": "bold",
+    "letterSpacing": "2.5px",
+    "outline": "1px solid #aaa",
+    // "border": "1px solid #fff",
+    // "before": {
+    //   "backgroundColor": "#fff",
+    //   "contentText": " *** ",
+    //   "fontWeight": "bold",
+    //   "margin": "10px"
+    //   // "width": "20px"
+    // }
+   },
+   {},
+   {
+    "color": "#999",
+    "fontStyle": "italic",
+    "letterSpacing": "1px"
+   }
+ ],
+// TODO:
+ "(//\\s*)(-+\\s+//)": [
+   {
+    "color": "#000",
+    "backgroundColor": "#aaa",
+    "outline": "2px solid #aaa",
+    "fontWeight": "bold",
+   },
+   {
+    "overviewRulerColor": "#2c2c2c",
+    "backgroundColor": "#aaa",
+    "color": "#000",
+    "fontWeight": "bold",
+    // "letterSpacing": "2.5px",
+    "outline": "2px solid #aaa",
+    // "border": "1px solid #fff",
+    // "before": {
+    //   "backgroundColor": "#fff",
+    //   "contentText": " *** ",
+    //   "fontWeight": "bold",
+    //   "margin": "10px"
+    //   // "width": "20px"
+    // }
+   },
+ ]
+    },
+    
 
 
 
