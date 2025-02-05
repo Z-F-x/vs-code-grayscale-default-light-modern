@@ -1,0 +1,106 @@
+{
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.automationProfile.linux": {
+        "path": "/usr/bin/zsh",
+        "args": ["--login"]
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/usr/bin/zsh",
+            "args": ["--login"]
+        }
+    },
+    "terminal.external.linuxExec": "alacritty",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "workbench.colorCustomizations": {
+    "minimap.selectionHighlight": "#37373713",
+    "editor.selectionBackground": "#37373713", // Adjust to match the inactive selection color
+    "editor.bracketPairColorization.enabled": true,
+    "editor.inactiveSelectionBackground": "#FFFFFF", // Inherit or match the same color
+    "activityBar.background": "#FFFFFF",  // Activity Bar
+    "sideBar.background": "#FFFFFF",     // Sidebar
+    "titleBar.activeBackground": "#FFFFFF", // Title Bar
+    "editorCursor.foreground": "#FEFEFE",   // Cursor
+    "tab.activeBackground": "#FFFFFF",     // Active Tab
+    "statusBar.background": "#FFFFFF",    // Status Bar
+    "terminal.foreground": "#D4D4D4",     // Terminal Text
+    "tab.activeBorder": "#aaaaaa",  // Remove the blue line atop the selected tab
+    "tab.inactiveBackground": "#FFFFFF",  // Inactive tab background
+    "tab.activeBorderTop": "#FFFFFF", 
+    "activityBar.activeBorder": "#FFFFFF",  // Change accent line color in Activity Bar
+    "tab.activeForeground": "#616161d6",  // Active tab text
+    "tab.inactiveForeground": "#888888a3",  // Inactive tab text
+    "tab.border": "#37373713",  // Tab border
+    "tab.hoverBackground": "#FFFFFF",  // Hover tab background
+    "statusBar.foreground": "#D4D4D4",        // Status bar text color
+    "statusBarItem.hoverBackground": "#37373713", // Hover color for status bar items
+    "statusBarItem.activeBackground": "#37373713", // Active status bar item background
+    "statusBar.remoteBackground": "#505050",   // Remote status bar background
+    "statusBar.remoteForeground": "#D4D4D4",    // Remote status bar text color
+    "button.background": "#37373748",              // All button backgrounds
+    "button.foreground": "#ffffff",              // Button text color
+    "button.hoverBackground": "#70707083",         // Button background when hovered
+    "button.activeBackground": "#404040",        // Button background when active (clicked)
+    "button.secondaryBackground": "#37373748",     // Secondary button background (e.g., "Cancel")
+    "button.secondaryForeground": "#ffffff",     // Secondary button text color
+    "button.secondaryHoverBackground": "#70707083", // Hover color for secondary buttons
+    "statusBarItem.background": "#505050",       // Status bar item background
+    "statusBarItem.foreground": "#D4D4D4",       // Status bar item text color
+    "quickInputButton.background": "#505050",    // Background color for buttons in quick input
+    "quickInputButton.foreground": "#D4D4D4",    // Text color for buttons in quick input
+    "quickInputButton.hoverBackground": "#707070", // Hover background for buttons in quick input
+    "activityBar.foreground": "#D4D4D4",         // Activity Bar icon color (buttons like Extensions)
+    "activityBarItem.hoverBackground": "#707070", // Hover color for Activity Bar items
+    "activityBarItem.activeBackground": "#404040", // Active color for selected items in Activity Bar
+    "focusBorder": "#505050",
+    "widget.shadow": "#FFFFFF",
+    "input.background": "#FFFFFF",
+    "input.foreground": "#D4D4D4",
+    "input.border": "#FFFFFF",
+    "notification.background": "#282828",
+    "notification.foreground": "#D4D4D4",
+    "notification.errorBackground": "#B00020",
+    "dropdown.background": "#FFFFFF",
+    "dropdown.foreground": "#D4D4D4",
+    "quickInput.background": "#FFFFFF",
+    "quickInput.foreground": "#D4D4D4",
+    "editorHoverWidget.background": "#FFFFFF",
+    "editorHoverWidget.border": "#505050",
+    "statusBarItem.remoteBackground": "#FFFFFF",
+    "statusBarItem.remoteForeground": "#ccc",
+    "textLink.foreground": "#737373", // Color of the links (such as "Open in Editor")
+    "textLink.activeForeground": "#D4D4D4",  // Color of the link when clicked or active
+},
+
+
+    "editor.semanticTokenColorCustomizations": {},
+    "editor.language.colorizedBracketPairs": [
+
+    ],
+    "editor.tokenColorCustomizations": {
+
+    },
+    "editor.tabSize": 1,
+    "editor.renderWhitespace": "none",
+    "editor.wordWrap": "on",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "LineNumberDeco.foregroundColorOfRepeatingDigits": "#1b1b1b",
+    "LineNumberDeco.centerColorOfRainbow": "#1b1b1b",
+    "LineNumberDeco.activeForeground": "#dedede",
+    "LineNumberDeco.foreground": "#505050",
+    "search.showLineNumbers": true, 
+    "editor.lineNumbers": "relative",
+    "workbench.settings.applyToAllProfiles": [],
+    "workbench.colorTheme": "Default Light Modern",
+
+
+
+    
+    
+}
