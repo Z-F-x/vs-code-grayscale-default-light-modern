@@ -1,65 +1,210 @@
 {
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.automationProfile.linux": {
-        "path": "/usr/bin/zsh",
-        "args": ["--login"]
-    },
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.profiles.linux": {
-        "zsh": {
-            "path": "/usr/bin/zsh",
-            "args": ["--login"]
-        }
-    },
-    "terminal.external.linuxExec": "alacritty",
-    "editor.cursorBlinking": "solid",
-    "editor.cursorStyle": "block",
-    "workbench.colorCustomizations": {
+  // ////////////////////////////////// //
+  //               Editor               //
+  // ////////////////////////////////// //
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  // Allow quick navigation via Alt+Click for definitions
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.smoothScrolling": true,
+  // Better minimap
+  "editor.minimap.enabled": true,
+  // Sticky scroll for functions/classes
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
+  // Word wrap improvements
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 180,
+  // Display indentation guides
+  "editor.guides.indentation": true,
+  // Highlight current line
+  "editor.renderLineHighlight": "all",
+  // Format pasted code automatically
+  "editor.formatOnPaste": true,
+  "editor.cursorSmoothCaretAnimation": "off",
+  // Show function signature help automatically while typing
+  "editor.parameterHints.enabled": true,
+  // Show suggestions even while typing in comments/strings
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  // Speed up IntelliSense response
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showWords": true,
+  // Zoom with mouse wheel
+  "editor.mouseWheelZoom": false,
+  // Better suggestions
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  // Quick suggestions timing
+  "editor.quickSuggestionsDelay": 100,
+  "editor.semanticTokenColorCustomizations": {
+    "[Default Light Modern]": {
+      "enabled": true,
+      "rules": {
+        "*.declaration": { "bold": true }
+      }
+    }
+  },
+  "editor.language.colorizedBracketPairs": [],
+  "editor.tabSize": 1,
+  "editor.renderWhitespace": "none",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoSurround": "never",
+  "search.showLineNumbers": true,
+  "editor.lineNumbers": "relative",
+  "files.autoSave": "onWindowChange",
+  // ////////////////////////////////// //
+  //             Breadcrumbs            //
+  // ////////////////////////////////// //
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "on",
+  // ////////////////////////////////// //
+  //             Workbench              //
+  // ////////////////////////////////// //
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active", // Options: "none", "active", "visible", "always"
+  "editor.guides.bracketPairsHorizontal": "active", // Optional: Horizontal guides (newer VS Code versions)
+  "editor.guides.highlightActiveBracketPair": true,
+  // Additional bracket pair colorization from light-theme.json
+  "editor.bracketPairColorization.activeScopeColor": "#ADD8E6", // Light blue for active matched bracket
+  "workbench.colorCustomizations": {
+    // Light theme color customizations
     "minimap.selectionHighlight": "#37373713",
-    "editor.selectionBackground": "#37373713", // Adjust to match the inactive selection color
-    "editor.bracketPairColorization.enabled": true,
-    "editor.inactiveSelectionBackground": "#ffffffed", // Inherit or match the same color
-    "activityBar.background": "#FFFFFF",  // Activity Bar
-    "sideBar.background": "#FFFFFF",     // Sidebar
-    "titleBar.activeBackground": "#FFFFFF", // Title Bar
-    "editorCursor.foreground": "#3737373c",   // Cursor
+    "editor.selectionBackground": "#37373713",
+    "editor.inactiveSelectionBackground": "#ffffffed",
+    // ———————————————————————————————————— //
+    // {} Bracket color highlighting BEGIN
+    // ———————————————————————————————————— //
+    "editorBracketHighlight.foreground1": "#ffff00",
+    "editorBracketHighlight.foreground2": "#e787ff",
+    "editorBracketHighlight.foreground3": "#ff9500",
+    "editorBracketHighlight.foreground4": "#009700",
+    "editorBracketHighlight.foreground5": "#85fffd",
+    "editorBracketHighlight.foreground6": "#6e69ff",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#0008ff",
+    "editorBracketMatch.background": "#414141",
+    "editorBracketMatch.border": "#414141",
+    "editorBracketHighlight.guide.foreground1": "#414141",
+    "editorBracketHighlight.guide.foreground2": "#414141",
+    "editorBracketHighlight.guide.foreground3": "#414141",
+    "editorBracketHighlight.guide.foreground4": "#414141",
+    "editorBracketHighlight.guide.foreground5": "#414141",
+    "editorBracketHighlight.guide.foreground6": "#414141",
+    "editorBracketHighlight.guide.activeForeground1": "#414141",
+    "editorBracketHighlight.guide.activeForeground2": "#414141",
+    "editorBracketHighlight.guide.activeForeground3": "#414141",
+    "editorBracketHighlight.guide.activeForeground4": "#414141",
+    "editorBracketHighlight.guide.activeForeground5": "#414141",
+    "editorBracketHighlight.guide.activeForeground6": "#414141",
+    // —————————————————————————————————— //
+    // Integrated Terminal Container BEGIN
+    // —————————————————————————————————— //
+    "badge.background": "#37373748",
+    "badge.foreground": "#727272",
+    "panelTitle.activeBorder": "#aaaaaa",
+    "panelTitle.activeForeground": "#616161d6",
+    "panelTitle.inactiveForeground": "#888888a3",
+    "panelTitle.border": "#37373713",
+    "panelTitleBadge.background": "#37373748",
+    "panelTitleBadge.foreground": "#ffffff",
+    "panelSectionHeader.border": "#37373713",
+    "panelSectionHeader.background": "#FFFFFF",
+    "panel.background": "#FFFFFF",
+    "panel.border": "#37373713",
+    "panel.dropBorder": "#37373713",
+    "panelInput.border": "#37373713",
+    "panelSection.border": "#FFFFFF",
+    "panelSection.dropBackground": "#FFFFFF",
+    "panelSectionHeader.foreground": "#727272",
+    "panelStickyScroll.background": "#FFFFFF",
+    "panelStickyScroll.border": "#FFFFFF",
+    "panelStickyScroll.shadow": "#FFFFFF",
+    "outputView.background": "#FFFFFF",
+    "outputViewStickyScroll.background": "#FFFFFF",
+    "terminal.tab.activeBorder": "#aaaaaa",
+    "terminal.tab.activeBackground": "#FFFFFF",
+    "dropdown.border": "#37373713",
+    "list.hoverBackground": "#FFFFFF",
+    "terminal.selectionBackground": "#37373713",
+    "terminalCursor.background": "#FFFFFF",
     "terminalCursor.foreground": "#DEDEDE",
-    "editorGroupHeader.tabsBackground": "#FFFFFF", // The background olorof entire row that tabs reside in 
-    "tab.activeBackground": "#FFFFFF",     // Active Tab
-    "statusBar.background": "#FFFFFF",    // Status Bar
-    "terminal.foreground": "#D4D4D4",     // Terminal Text
-    "tab.activeBorder": "#aaaaaa",  // Remove the blue line atop the selected tab
-    "tab.inactiveBackground": "#FFFFFF",  // Inactive tab background
-    "tab.activeBorderTop": "#FFFFFF", 
-    "activityBar.activeBorder": "#FFFFFF",  // Change accent line color in Activity Bar
-    "tab.activeForeground": "#616161d6",  // Active tab text
-    "tab.inactiveForeground": "#888888a3",  // Inactive tab text
-    "tab.border": "#37373713",  // Tab border
-    "tab.hoverBackground": "#FFFFFF",  // Hover tab background
-    "statusBar.foreground": "#D4D4D4",        // Status bar text color
+    "terminal.border": "#37373713",
+    // Terminal-specific scrollbar settings
+    "terminal.integrated.scrollback": 10000, // You already have this
+    "terminal.integrated.fastScrollSensitivity": 5, // Mouse wheel scroll speed
+
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.focusAfterRun": "terminal",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.hideOnLastClosed": false,
+    "terminal.integrated.hideOnStartup": "whenEmpty",
+    "terminal.integrated.ignoreBracketedPasteMode": true,
+    "terminal.integrated.localEchoLatencyThreshold": 10,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.stickyScroll.maxLineCount": 10,
+    "terminal.integrated.tabs.hideCondition": "never",
+    "terminal.integrated.windowsUseConptyDll": true,
+    "terminal.integrated.environmentChangesIndicator": "on",
+    "terminal.integrated.fontSize": 12,
+    // ———————————————————————————————— //
+    // Integrated Terminal Styling END
+    // ———————————————————————————————— //
+    "LineNumberDeco.foregroundColorOfRepeatingDigits": "#1b1b1b",
+    "LineNumberDeco.centerColorOfRainbow": "#1b1b1b",
+    "LineNumberDeco.activeForeground": "#555555",
+    "LineNumberDeco.foreground": "#505050",
+    "activityBar.background": "#FFFFFF", // Activity Bar
+
+    // File Explorer background and sidebar background
+    "sideBar.background": "#FFFFFF", // Sidebar
+    "titleBar.activeBackground": "#FFFFFF", // Title Bar
+    "editorGroupHeader.tabsBackground": "#FFFFFF", // Tab row background
+    "tab.activeBackground": "#FFFFFF", // Active Tab
+    "statusBar.background": "#FFFFFF", // Status Bar
+    "terminal.foreground": "#D4D4D4", // Terminal Text
+    "tab.activeBorder": "#aaaaaa", // Tab border line
+    "tab.inactiveBackground": "#FFFFFF", // Inactive tab background
+    "tab.activeBorderTop": "#FFFFFF",
+    "activityBar.activeBorder": "#FFFFFF", // Activity Bar accent line
+    "tab.activeForeground": "#616161d6", // Active tab text
+    "tab.inactiveForeground": "#888888a3", // Inactive tab text
+    "tab.border": "#37373713", // Tab border
+    "tab.hoverBackground": "#FFFFFF", // Hover tab background
+    "statusBar.foreground": "#D4D4D4", // Status bar text color
     "statusBarItem.hoverBackground": "#37373713", // Hover color for status bar items
     "statusBarItem.activeBackground": "#37373713", // Active status bar item background
-    "statusBar.remoteBackground": "#505050",   // Remote status bar background
-    "statusBar.remoteForeground": "#D4D4D4",    // Remote status bar text color
-    "button.background": "#37373748",              // All button backgrounds
-    "button.foreground": "#ffffff",              // Button text color
-    "button.hoverBackground": "#70707083",         // Button background when hovered
-    "button.activeBackground": "#404040",        // Button background when active (clicked)
-    "button.secondaryBackground": "#37373748",     // Secondary button background (e.g., "Cancel")
-    "button.secondaryForeground": "#ffffff",     // Secondary button text color
+    "statusBar.remoteBackground": "#FFFFFF", // Remote status bar background
+    "statusBar.remoteForeground": "#ccc", // Remote status bar text color
+    "button.background": "#37373748", // All button backgrounds
+    "button.foreground": "#ffffff", // Button text color
+    "button.hoverBackground": "#70707083", // Button background when hovered
+    "button.activeBackground": "#404040", // Button background when active (clicked)
+    "button.secondaryBackground": "#37373748", // Secondary button background (e.g., "Cancel")
+    "button.secondaryForeground": "#ffffff", // Secondary button text color
     "button.secondaryHoverBackground": "#70707083", // Hover color for secondary buttons
-    "statusBarItem.background": "#505050",       // Status bar item background
-    "statusBarItem.foreground": "#D4D4D4",       // Status bar item text color
-    "quickInputButton.background": "#505050",    // Background color for buttons in quick input
-    "quickInputButton.foreground": "#D4D4D4",    // Text color for buttons in quick input
+    "statusBarItem.background": "#505050", // Status bar item background
+    "statusBarItem.foreground": "#D4D4D4", // Status bar item text color
+    "quickInputButton.background": "#505050", // Background color for buttons in quick input
+    "quickInputButton.foreground": "#D4D4D4", // Text color for buttons in quick input
     "quickInputButton.hoverBackground": "#707070", // Hover background for buttons in quick input
-    "activityBar.foreground": "#D4D4D4",         // Activity Bar icon color (buttons like Extensions)
+    "activityBar.foreground": "#D4D4D4", // Activity Bar icon color (buttons like Extensions)
     "activityBarItem.hoverBackground": "#707070", // Hover color for Activity Bar items
     "activityBarItem.activeBackground": "#404040", // Active color for selected items in Activity Bar
     "focusBorder": "#505050",
     "widget.shadow": "#FFFFFF",
     "input.background": "#FFFFFF",
-    "input.foreground": "#727272",    
+    "input.foreground": "#727272",
     "input.border": "#FFFFFF",
     "notification.background": "#282828",
     "notification.foreground": "#D4D4D4",
@@ -73,279 +218,423 @@
     "statusBarItem.remoteBackground": "#FFFFFF",
     "statusBarItem.remoteForeground": "#ccc",
     "textLink.foreground": "#737373", // Color of the links (such as "Open in Editor")
-    "textLink.activeForeground": "#D4D4D4",  // Color of the link when clicked or active
+    "textLink.activeForeground": "#D4D4D4", // Color of the link when clicked or active
+    "editorCursor.foreground": "#3737373c", // Cursor color
     "editorLineNumber.activeForeground": "#555555",
-    "editorSuggestWidget.background": "#FFFFFF", // Autocomplete hover (if applicable)
-    "editor.selectionHighlightBackground": "#7777770a", // Change to any color
-    "editor.selectionHighlightBorder": "#DEDEDE", // Optional: Adds a border around it
-    "editor.findMatchBackground": "#DEDEDE",        // Color for the currently selected search match
+    "editorSuggestWidget.background": "#FFFFFF", // Autocomplete hover
+    "editor.findMatchBackground": "#DEDEDE", // Color for the currently selected search match
     "editor.findMatchHighlightBackground": "#dededeed", // Color for other matches
-    "editor.findRangeHighlightBackground": "#dededeed",  // Color for the search range highlight
-    "editor.lineHighlightBackground": "#00000000",
+    "editor.findRangeHighlightBackground": "#dededeed", // Color for the search range highlight
     "editor.rangeHighlightBackground": "#cbcbcb48", // Highlight the line of the first matched search result
-    "editor.lineHighlightBorder": "#ffffff00",  // Transparent border around the current line
-    "editor.guides.bracketPairs": "active",
     "peekViewEditor.background": "#eeeeee", // Used in "Go to Definition" popups
     "peekViewEditor.matchHighlightBackground": "#555555", // Highlighted text
-    "scrollbarSlider.background": "#eeeeeefc",  // Scrollbar slider color
-    "scrollbarSlider.hoverBackground": "#dededefd",  // Scrollbar slider hover color
+    "scrollbarSlider.background": "#eeeeeefc", // Scrollbar slider color
+    "scrollbarSlider.hoverBackground": "#dededefd", // Scrollbar slider hover color
     "scrollbarSlider.activeBackground": "#dededebd", // Scrollbar slider color while being pressed
-
-    
-},
-
-"editor.semanticTokenColorCustomizations": {
-    "[Rouge]": {
-        "enabled": true,
-        "rules": {
-            "*.declaration": { "bold": true }
-        }
+    // Allow VS Code to relaunch a renderer if it must load a very large file
+    "files.maxMemoryForLargeFilesMB": 8192,
+    "workbench.editor.tabCloseButton": "right"
+  },
+  // Centered editor layout
+  "workbench.editor.centeredLayoutAutoResize": false,
+  // Better status bar
+  "workbench.statusBar.visible": true,
+  // Tab improvements
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.pinnedTabSizing": "compact",
+  // Smooth scrolling and animations
+  "workbench.list.smoothScrolling": true,
+  // ////////////////////////////////// //
+  //              Explorer              //
+  // ////////////////////////////////// //
+  // Compact folders in the Explorer
+  "explorer.compactFolders": false,
+  // Open new tabs to the right of the active one
+  "workbench.editor.openPositioning": "right",
+  // Keep unsaved tabs open even after closing VSCode
+  "files.hotExit": "onExitAndWindowClose",
+  // Trim trailing whitespace on save
+  "files.trimTrailingWhitespace": true,
+  // Ensure newline at end of file
+  "files.insertFinalNewline": true,
+  // ////////////////////////////////// //
+  //             Experimental           //
+  // ////////////////////////////////// //
+  // Inline error messages as decorators (less intrusive)
+  "editor.inlineSuggest.enabled": true,
+  // Allow multiple cursors to edit similar code (aka Linked Editing)
+  "editor.linkedEditing": true,
+  // Peek definitions instead of jumping
+  "editor.gotoLocation.multipleDefinitions": "peek",
+  "editor.gotoLocation.multipleImplementations": "peek",
+  // ////////////////////////////////// //
+  //              Navigation            //
+  // ////////////////////////////////// //
+  // Ctrl+Enter to run a command in the Command Palette
+  "keyboard.dispatch": "keyCode",
+  // Auto-reveal files in explorer
+  "explorer.autoReveal": true,
+  // Better file sorting
+  "explorer.sortOrder": "type",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+  },
+  // ////////////////////////////////// //
+  //                Git                //
+  // ////////////////////////////////// //
+  "scm.diffDecorations": "all",
+  "git.decorations.enabled": true,
+  "git.timeline.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.autofetch": false,
+  "git.confirmSync": false,
+  // ////////////////////////////////// //
+  //               Search               //
+  // ////////////////////////////////// //
+  // Exclude common files from search
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  "search.smartCase": true,
+  "search.globalFindClipboard": true,
+  // ////////////////////////////////// //
+  //              Debugging             //
+  // ////////////////////////////////// //
+  "debug.console.fontSize": 12,
+  "debug.console.wordWrap": true,
+  "debug.inlineValues": "auto",
+  // ////////////////////////////////// //
+  //              Linting               //
+  // ////////////////////////////////// //
+  // TypeScript/JavaScript enhancements
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.quoteStyle": "double",
+  "javascript.preferences.quoteStyle": "double",
+  // JSON improvements
+  "json.validate.enable": true,
+  "json.format.keepLines": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // Auto-imports
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Default Light Modern",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.customLabels.enabled": true,
+  "diffEditor.maxComputationTime": 0,
+  // ////////////////////////////////// //
+  //              Terminal              //
+  // ////////////////////////////////// //
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font", // Updated from light-theme.json
+  "terminal.integrated.cursorStyleInactive": "block",
+  "terminal.integrated.letterSpacing": 1,
+  "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.cursorStyle": "block", // or "block", "line"
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.localEchoStyle": "dim", // in MB
+  "terminal.integrated.minimumContrastRatio": 4.5, // for accessibility
+  "terminal.integrated.gpuAcceleration": "on", // or "auto", "off"
+  "terminal.integrated.windowsEnableConpty": true, // enables modern Windows PTY
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.customGlyphs": true,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "bold",
+  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+  "terminal.integrated.allowChords": true,
+  "terminal.integrated.allowMnemonics": true,
+  "terminal.integrated.altClickMovesCursor": true,
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  "terminal.integrated.rightClickBehavior": "selectWord",
+  "terminal.integrated.suggest.cdPath": "absolute",
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.inlineSuggestion": "alwaysOnTop",
+  "terminal.integrated.suggest.upArrowNavigatesHistory": true,
+  "terminal.integrated.suggest.providers": {
+    "terminal-suggest": true,
+    "pwsh-shell-integration": true
+  },
+  "terminal.integrated.suggest.quickSuggestions": {
+    "commands": "on",
+    "arguments": "on",
+    "unknown": "off"
+  },
+  "terminal.integrated.suggest.showStatusBar": true,
+  "terminal.integrated.suggest.runOnEnter": "always",
+  "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.pasteOnRightClick": true,
+  "terminal.integrated.defaultProfile.windows": "Developer Command Prompt", // or "Command Prompt", "Git Bash", "PowerShell", "WSL", etc.
+  // Add Linux profiles for cross-platform compatibility (from light-theme.json)
+  "terminal.integrated.automationProfile.linux": {
+    "path": "/usr/bin/zsh",
+    "args": ["--login"]
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": ["--login"]
     }
-},
-
-    "editor.language.colorizedBracketPairs": [
-
-    ],
-  
-
-    
-      "editor.tokenColorCustomizations": {
-        "textMateRules": [
-          {
-            "scope": [
-              "punctuation.definition.block",        // Curly braces {}
-              "punctuation.definition.parameters",    // Parentheses ()
-              "punctuation.definition.array"          // Square brackets []
-            ],
-            "settings": {
-              "background": "#FFEB3B",  // Light yellow background for matching brackets
-              "border": "1px solid #FF6347" // Tomato red border for matching brackets
-            }
-          }
-        ]
+  },
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Developer Command Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/k",
+        "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat"
+      ],
+      "env": {
+        "TERM_ID": "DevCMD"
       },
-      
-    
-    
-    "editor.tabSize": 1,
-    "editor.renderWhitespace": "none",
-    "editor.wordWrap": "on",
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingDelete": "never",
-    "editor.autoClosingOvertype": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.autoSurround": "never",
+      "icon": "terminal"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "icon": "terminal-cmd"
+    }
+  },
+  "[json]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[jsonc]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.activityBar.location": "top",
 
-    "LineNumberDeco.foregroundColorOfRepeatingDigits": "#1b1b1b",
-    "LineNumberDeco.centerColorOfRainbow": "#1b1b1b",
-    "LineNumberDeco.activeForeground": "#dedede",
-    "LineNumberDeco.foreground": "#505050",
-    "search.showLineNumbers": true, 
-    "editor.lineNumbers": "relative",
-    "workbench.settings.applyToAllProfiles": [],
-    "workbench.colorTheme": "Default Light Modern",
-    "editor.bracketPairColorization.enabled": true,  // Enable colorization of bracket pairs
-"editor.bracketPairColorization.activeScopeColor": "#ADD8E6",  // Light blue for active matched bracket
+  // ////////////////////////////////// //
+  //       Token Color Customizations   //
+  // ////////////////////////////////// //
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "punctuation.definition.block", // Curly braces {}
+          "punctuation.definition.parameters", // Parentheses ()
+          "punctuation.definition.array" // Square brackets []
+        ],
+        "settings": {
+          "background": "#FFEB3B", // Light yellow background for matching brackets
+          "border": "1px solid #FF6347" // Tomato red border for matching brackets
+        }
+      }
+    ]
+  },
 
-
-
-    
+  // ////////////////////////////////// //
+  //       TODO/FIXME Highlighting      //
+  // ////////////////////////////////// //
   "highlight.regexes": {
-    "((?:\\{))": {  // Regex matching only the opening curly brace `{`
+    "((?:\\{))": {
+      // Regex matching only the opening curly brace `{`
       "decorations": [
         {
-          "backgroundColor": "#ffffff",     // Light Blue background for matched `{`
-          "color": "#1f1f1f",                // Dark text color for readability
+          "backgroundColor": "#ffffff", // Light Blue background for matched `{`
+          "color": "#1f1f1f" // Dark text color for readability
         },
         {
-          "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-          "color": "#1f1f1f"                // Dark text color for readability
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
         }
       ]
     },
-    "((?:\\}))": {  // Regex matching only the opening curly brace `{`
-    "decorations": [
-      {
-        "backgroundColor": "#ffffff",     // Light Blue background for matched `{`
-        "color": "#1f1f1f",                // Dark text color for readability
-      },
-      {
-        "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-        "color": "#1f1f1f"                // Dark text color for readability
-      }
-    ],
-    "((?:\\())": {  // Regex matching only the opening paranthesis `(`
-    "decorations": [
-      {
-        "backgroundColor": "#ffffff",     // Light Blue background for matched `)`
-        "color": "#1f1f1f",                // Dark text color for readability
-      },
-      {
-        "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-        "color": "#1f1f1f"                // Dark text color for readability
-      }
+    "((?:\\}))": {
+      // Regex matching only the closing curly brace `}`
+      "decorations": [
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for matched `}`
+          "color": "#1f1f1f" // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
+        }
       ]
     },
-    "((?:\\)))": {  // Regex matching only the closing paranthesis `)`
+    "((?:\\())": {
+      // Regex matching only the opening parenthesis `(`
       "decorations": [
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for matched `(`
+          "color": "#1f1f1f" // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
+        }
+      ]
+    },
+    "((?:\\)))": {
+      // Regex matching only the closing parenthesis `)`
+      "decorations": [
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for matched `)`
+          "color": "#1f1f1f" // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
+        }
+      ]
+    },
+    "((?:\\[))": {
+      // Regex matching only the opening square bracket `[`
+      "decorations": [
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for matched `[`
+          "color": "#1f1f1f" // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
+        }
+      ]
+    },
+    "((?:\\]))": {
+      // Regex matching only the closing square bracket `]`
+      "decorations": [
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for matched `]`
+          "color": "#1f1f1f" // Dark text color for readability
+        },
+        {
+          "backgroundColor": "#ffffff", // Light Blue background for the second match group
+          "color": "#1f1f1f" // Dark text color for readability
+        }
+      ]
+    },
+
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#a5a5a5",
+          "backgroundColor": "#a5a5a5",
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#a5a5a5",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#ff0000",
+          "backgroundColor": "#ff0000",
+          "color": "#FFFFFF",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#ff0000",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#87CEFA",
+          "backgroundColor": "#87CEFA",
+          "color": "#FFFFFF",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#87CEFA",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#bb00ff54",
+          "backgroundColor": "#bb00ff54",
+          "color": "#FFFFFF",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#bb00ff54",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "(//\\s*)(\\sTODO\\s)(\\s*?:?)(.*)": [
+      {},
       {
-      "backgroundColor": "#ffffff",     // Light Blue background for matched `)`
-      "color": "#1f1f1f",                // Dark text color for readability
-    },
-    {
-      "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-      "color": "#1f1f1f"                // Dark text color for readability
-    }
-  ]
-},
-},    
-"((?:\\[))": {  // Regex matching only the opening curly brace `[`
-  "decorations": [
-    {
-      "backgroundColor": "#ffffff",     // Light Blue background for matched `[`
-      "color": "#1f1f1f",                // Dark text color for readability
-    },
-    {
-      "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-      "color": "#1f1f1f"                // Dark text color for readability
-    }
-  ]
-},
-"((?:\\]))": {  // Regex matching only the opening curly brace `]`
-  "decorations": [
-  {
-    "backgroundColor": "#ffffff",     // Light Blue background for matched `]`
-    "color": "#1f1f1f",                // Dark text color for readability
-  },
-  {
-    "backgroundColor": "#ffffff",     // Light Blue background for the second match group
-    "color": "#1f1f1f"                // Dark text color for readability
+        "overviewRulerColor": "#6c6c6c",
+        "color": "#fff",
+        "fontWeight": "bold",
+        "letterSpacing": "2.5px",
+        "outline": "1px solid #aaa"
+      },
+      {},
+      {
+        "color": "#999",
+        "fontStyle": "italic",
+        "letterSpacing": "1px"
+      }
+    ],
+    "(//\\s*)(-+\\s+//)": [
+      {
+        "color": "#000",
+        "backgroundColor": "#aaa",
+        "outline": "2px solid #aaa",
+        "fontWeight": "bold"
+      },
+      {
+        "overviewRulerColor": "#2c2c2c",
+        "backgroundColor": "#aaa",
+        "color": "#000",
+        "fontWeight": "bold",
+        "outline": "2px solid #aaa"
+      }
+    ]
   }
-  ]
-},
-    
-    
-      
-      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-        "decorations": [
-          {
-           //TODO:
-           // Alternative bright blue colors common in Microsoft and Windows color palette : #ADD8E6, #87CEFA
-            "overviewRulerColor": "#a5a5a5",
-            "backgroundColor": "#a5a5a5",
-            "color": "#ffffff",
-            "fontWeight": "bold"
-          },
-          {
-            "backgroundColor": "#a5a5a5",
-            "color": "#1f1f1f"
-          }
-        ]
-      },
-      
-      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-        "decorations": [
-          {
-            "overviewRulerColor": "#ff0000",
-            "backgroundColor": "#ff0000",
-            "color": "#FFFFFF",
-            "fontWeight": "bold"
-          },
-          {
-            "backgroundColor": "#ff0000",
-            "color": "#FFFFFF"
-          }
-        ]
-      },
-      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-        "decorations": [
-          //OPTIMIZE : #ADD8E6, #87CEFA #00ccff
-          {
-            "overviewRulerColor": "#87CEFA",
-            "backgroundColor": "#87CEFA",
-            "color": "#FFFFFF",
-            "fontWeight": "bold"
-          },
-          {
-            "backgroundColor": "#87CEFA",
-            "color": "#FFFFFF"
-          }
-        ]
-      },
-      "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-        "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-        "decorations": [
-          //IDEA: #bb00ff93, #cc00cc, #bb00ff54
-          {
-            "overviewRulerColor": "#bb00ff54",
-            "backgroundColor": "#bb00ff54",
-            "color": "#FFFFFF",
-            "fontWeight": "bold"
-          },
-          {
-            "backgroundColor": "#bb00ff54",
-            "color": "#FFFFFF"
-          }
-        ]
-      },
-      "(//\\s*)(\\sTODO\\s)(\\s*?:?)(.*)": [
-   {},
-   {
-    "overviewRulerColor": "#6c6c6c", // does this work?
-    // "backgroundColor": "#aaa",
-    "color": "#fff",
-    "fontWeight": "bold",
-    "letterSpacing": "2.5px",
-    "outline": "1px solid #aaa",
-    // "border": "1px solid #fff",
-    // "before": {
-    //   "backgroundColor": "#fff",
-    //   "contentText": " *** ",
-    //   "fontWeight": "bold",
-    //   "margin": "10px"
-    //   // "width": "20px"
-    // }
-   },
-   {},
-   {
-    "color": "#999",
-    "fontStyle": "italic",
-    "letterSpacing": "1px"
-   }
- ],
-// TODO:
- "(//\\s*)(-+\\s+//)": [
-   {
-    "color": "#000",
-    "backgroundColor": "#aaa",
-    "outline": "2px solid #aaa",
-    "fontWeight": "bold",
-   },
-   {
-    "overviewRulerColor": "#2c2c2c",
-    "backgroundColor": "#aaa",
-    "color": "#000",
-    "fontWeight": "bold",
-    // "letterSpacing": "2.5px",
-    "outline": "2px solid #aaa",
-    // "border": "1px solid #fff",
-    // "before": {
-    //   "backgroundColor": "#fff",
-    //   "contentText": " *** ",
-    //   "fontWeight": "bold",
-    //   "margin": "10px"
-    //   // "width": "20px"
-    // }
-   },
- ]
-    },
-    
-
-
-
-    
-    
 }
